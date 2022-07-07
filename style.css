@@ -48,3 +48,17 @@ h1 {
     left: 0;
     right: 0;
 }
+
+#botao {
+    height: 46px;
+    width: 180px;
+    margin-top: 16px;
+    
+    background-color: rgb(235, 250, 21);
+    color: rgb(0, 0, 0);
+    font-size: larger;
+    border: 1px solid rgb(255, 187, 0);
+    cursor: pointer;
+    
+
+}

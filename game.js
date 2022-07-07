@@ -66,3 +66,19 @@ function isWin(){
 
     return false
 }
+
+
+
+
+////
+function restartGame() {
+    // reiniciar as variáveis
+    board = ["", "", "", "", "", "", "", "", ""];
+    gameOver = false;
+    playerTime = 0
+    
+    // updateSquares()
+    console.log("aaki");
+    
+
+}
