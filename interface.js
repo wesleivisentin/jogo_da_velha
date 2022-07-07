@@ -42,22 +42,28 @@ function updateSquare(position) {
 // mesma coisa que esse:
 function updateSquares(){
     let squares = document.querySelectorAll(".square")
-
+    
     squares.forEach((square) => {
         let position = square.id
+        
         let symbol = board[position]
 
         if (symbol != "") {
-            square.innerHTML = `<div class="${symbol}"></div>`
+           
+            square.classList.remove("x")
+            
         }
     })
 }
 
-// let button = document.getElementById("botao")
-// button.addEventListener("click", ()=>{
+let button = document.getElementById("botao")
+button.addEventListener("click", ()=>{
 
-//     console.log("teste");
-//     restartGame()
+    console.log("teste");
+
+    restart()
+    // window.location.reload()
+    
     
 
     
@@ -67,16 +73,16 @@ function updateSquares(){
     
     
     
-// })
+})
 
 
-function resetGame(){
+// function resetGame(){
 
-    restartGame()
-    squares.forEach((square)=>{
+//     restartGame()
+//     squares.forEach((square)=>{
 
-        square.innerHTML = ''
+//         square.innerHTML = ''
         
-    })
-    updateSquares()
-}
+//     })
+//     updateSquares()
+// }

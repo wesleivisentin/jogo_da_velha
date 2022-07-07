@@ -32,6 +32,7 @@ function handleMove(position) {
         if(gameOver == false){
 
             playerTime = (playerTime == 0) ? 1 : 0;
+           
 
             // if (playerTime == 0) {
             //     playerTime = 1
@@ -58,7 +59,7 @@ function isWin(){
         if (board[pos1] == board[pos2] &&
             board[pos1] == board[pos3] &&
             board[pos1] != "") {
-
+                
                 return true
             }
 
@@ -71,14 +72,35 @@ function isWin(){
 
 
 ////
-function restartGame() {
-    // reiniciar as variáveis
-    board = ["", "", "", "", "", "", "", "", ""];
-    gameOver = false;
-    playerTime = 0
+// function restartGame() {
+//     // reiniciar as variáveis
     
-    // updateSquares()
-    console.log("aaki");
+//     board = ["", "", "", "", "", "", "", "", ""];
+//     gameOver = false;
+//     playerTime = 0
+    
+//      updateSquares()
+//     console.log("aaki");
     
 
+// }
+
+function restart(){
+
+    let squares = document.querySelectorAll('.square');
+
+    for(let i = 0; i < board.length; i++){
+        board[i] = '';
+        squares.forEach((square) => {
+            if (square.hasChildNodes()) {
+                square.removeChild(square.childNodes[0]);
+              } 
+        })
+    }
+
+    board = ["", "", "", "", "", "", "", "", ""];
+    gameOver = false;
+     playerTime = 0
+
+   
 }
